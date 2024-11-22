@@ -69,13 +69,34 @@ Categorical Data Handling: As we are currently not handling categorical variable
 The model selectors provide several important parameters that allow users to customize the model evaluation and selection process. These parameters include the number of folds (k) for cross-validation, which defaults to 5 but can be adjusted depending on the dataset size and computational constraints. For bootstrapping, users can set the number of iterations (n_iterations, with a default of 100) to balance estimation accuracy with computational efficiency. In the Ridge Regression model, the regularization strength can be tuned using the alpha parameter. Additionally, the test_size parameter (defaulting to 0.2 or 20% of the data) lets users control the proportion of data allocated for testing during data splitting. These customizable parameters offer flexibility, enabling users to tailor the model selection process to their specific requirements while ensuring proper cross-validation practices as shown in the image.
 
 # Intructions on how to use the model.py and test.py.
-For model.py, it's straightforward: the user should ensure that both the dataset and test.py are in the same folder. Additionally, all required dependencies must be installed for the code to run properly.
+Here's a paraphrase of the instructions for model.py and test.py:
 
-In test.py, make sure to import the dataset correctly by specifying the delimiter parameter when loading the data. Ensure that the target value is placed at the end of the dataset, and modify the following lines of code accordingly:
+**model.py:**
+
+* Keep it simple! Make sure the data file (like "winequality-red.csv") and the test script (test.py) are in the same location.
+* Double-check that you have all the necessary libraries installed for the code to work.
+
+**test.py:**
+
+* This script deals with loading the data. When you use the script to import the data, pay attention to the `delimiter` parameter (separates values in the file).
+* The quality score (or whatever your target value is called) should be the last column in the data. Update the lines:
+
+```python
 X = df.drop('FEATURE_NAME', axis=1).values
 y = df['FEATURE_NAME'].values
-Replace 'FEATURE_NAME' with the actual name of the feature in your dataset. In the main function, ensure that you update the dataset file name to match the actual data file being used, for example:
-def main():
-    X, y = load_and_preprocess_data('Winequality-red.csv')
-Additionally, consider adjusting the "K" value for cross-validation and the "n_iterations" parameter for bootstrapping to improve model performance based on the dataset size and computational resources.
+```
 
+* Replace `'FEATURE_NAME'` with the actual name of the quality score column in your data.
+
+**Main Function:**
+
+* In the main function, make sure the filename you provide for loading the data matches the actual file you're using. For example, if your data is in "Winequality-red.csv", update the line to:
+
+```python
+def main():
+  X, y = load_and_preprocess_data('Winequality-red.csv')
+```
+
+**Tips:**
+
+* Play around with the "K" value used for cross-validation and the number of iterations ("n_iterations") for bootstrapping. These can affect how well your model performs. The best settings will depend on the size of your data and your computer's processing power. 
