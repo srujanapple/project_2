@@ -68,4 +68,14 @@ Categorical Data Handling: As we are currently not handling categorical variable
 
 The model selectors provide several important parameters that allow users to customize the model evaluation and selection process. These parameters include the number of folds (k) for cross-validation, which defaults to 5 but can be adjusted depending on the dataset size and computational constraints. For bootstrapping, users can set the number of iterations (n_iterations, with a default of 100) to balance estimation accuracy with computational efficiency. In the Ridge Regression model, the regularization strength can be tuned using the alpha parameter. Additionally, the test_size parameter (defaulting to 0.2 or 20% of the data) lets users control the proportion of data allocated for testing during data splitting. These customizable parameters offer flexibility, enabling users to tailor the model selection process to their specific requirements while ensuring proper cross-validation practices as shown in the image.
 
+# Intructions on how to use the model.py and test.py.
+For model.py, it's straightforward: the user should ensure that both the dataset and test.py are in the same folder. Additionally, all required dependencies must be installed for the code to run properly.
+
+In test.py, make sure to import the dataset correctly by specifying the delimiter parameter when loading the data. Ensure that the target value is placed at the end of the dataset, and modify the following lines of code accordingly:
+X = df.drop('FEATURE_NAME', axis=1).values
+y = df['FEATURE_NAME'].values
+Replace 'FEATURE_NAME' with the actual name of the feature in your dataset. In the main function, ensure that you update the dataset file name to match the actual data file being used, for example:
+def main():
+    X, y = load_and_preprocess_data('Winequality-red.csv')
+Additionally, consider adjusting the "K" value for cross-validation and the "n_iterations" parameter for bootstrapping to improve model performance based on the dataset size and computational resources.
 
