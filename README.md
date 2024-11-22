@@ -1,3 +1,11 @@
+#Team members
+Satya mani srujan Dommeti 
+Arjun Singh 
+Akshitha reddy kuchipatla
+Vamsi Krishna 
+
+
+
 # model selection
 This project focuses on developing custom approaches to model selection using a several datasets. Techniques such as k-fold cross-validation, bootstrapping, and the Akaike Information Criterion (AIC) are employed to analyze and compare various linear regression models. The primary aim is to provide a practical demonstration of implementing machine learning algorithms and performance metrics for both regression and classification problems, without relying on libraries like scikit-learn. This work underscores the importance of gaining an in-depth understanding of the core concepts underlying model selection and evaluation.
 
