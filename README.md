@@ -24,8 +24,7 @@ In simple cases like linear regression, the cross-validation, bootstrapping, and
 - **Bootstrapping**: This method repeatedly samples the training data with replacement, fits the model, and evaluates its performance (e.g., MSE). It captures variability in model performance due to data sampling.
 
 - **AIC**: AIC uses the MSE and penalizes model complexity based on the number of parameters. For linear regression, which typically has a straightforward relationship between features and output, AIC often agrees with the other methods because the MSE forms the foundation for its calculations.
-
-Given the code provided:
+  
 - Both k-fold cross-validation and bootstrapping rely on MSE for evaluation, similar to AIC. Hence, in simpler models like linear regression, these approaches are likely to identify the same optimal model because they evaluate similar metrics under slightly different conditions.
 - The alignment may diverge in more complex scenarios, such as models with high regularization (e.g., ridge regression) or datasets with noise, where AIC’s penalty on model complexity could lead to different selections compared to resampling-based techniques.
 
