@@ -1,8 +1,10 @@
-# Team members
-1. Satya mani srujan Dommeti 
-2.Arjun Singh 
-3.Akshitha reddy kuchipatla
-4.Vamsi Krishna 
+### Team Members
+
+1. Satya Mani Srujan Dommeti  
+2. Arjun Singh  
+3. Akshitha Reddy Kuchipatla  
+4. Vamsi Krishna  
+
 
 
 # Model Implementation and Evaluation
