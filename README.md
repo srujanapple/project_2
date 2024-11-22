@@ -1,8 +1,8 @@
 # Team members
-Satya mani srujan Dommeti 
-Arjun Singh 
-Akshitha reddy kuchipatla
-Vamsi Krishna 
+1. Satya mani srujan Dommeti 
+2.Arjun Singh 
+3.Akshitha reddy kuchipatla
+4.Vamsi Krishna 
 
 
 
