@@ -28,3 +28,19 @@ In simple cases like linear regression, the cross-validation, bootstrapping, and
 Given the code provided:
 - Both k-fold cross-validation and bootstrapping rely on MSE for evaluation, similar to AIC. Hence, in simpler models like linear regression, these approaches are likely to identify the same optimal model because they evaluate similar metrics under slightly different conditions.
 - The alignment may diverge in more complex scenarios, such as models with high regularization (e.g., ridge regression) or datasets with noise, where AIC’s penalty on model complexity could lead to different selections compared to resampling-based techniques.
+
+### In what cases might the methods you've written fail or give incorrect or undesirable results?
+Bootstrapping:
+
+May lead to overfitting by emphasizing specific patterns in the data, especially when there are repeated patterns due to resampling with replacement.
+Assumes the data is representative of the population, which can cause biased estimates if the data is highly skewed or the sample size is too small.
+K-fold Cross-Validation:
+
+Can be computationally expensive for large datasets since it requires retraining the model for each fold, slowing down the process.
+Might give biased results when dealing with imbalanced datasets or non-i.i.d. data (like time series), as improper data partitioning may overestimate the model’s performance.
+AIC (Akaike Information Criterion):
+
+Tends to penalize models with many predictors too much, especially in the presence of multicollinearity, potentially leading to overly simplistic models that underfit the data.
+Assumes the model is correctly specified. If the model assumptions (e.g., linear relationships) are incorrect, AIC may suggest a poor-fitting model.
+
+### What could you implement given more time to mitigate these cases or help users of your methods?
