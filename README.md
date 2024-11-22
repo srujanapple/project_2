@@ -61,3 +61,11 @@ Dynamic Model Evaluation: We could enhance the evaluate_model method to include 
 Data Type Handling:
 
 Categorical Data Handling: As we are currently not handling categorical variables, introducing preprocessing techniques like one-hot encoding or label encoding for categorical data would allow for a more comprehensive model that works with both numerical and categorical data. This is especially important for datasets with mixed data types.
+
+
+
+### What parameters have you exposed to your users in order to use your model selectors.
+
+The model selectors provide several important parameters that allow users to customize the model evaluation and selection process. These parameters include the number of folds (k) for cross-validation, which defaults to 5 but can be adjusted depending on the dataset size and computational constraints. For bootstrapping, users can set the number of iterations (n_iterations, with a default of 100) to balance estimation accuracy with computational efficiency. In the Ridge Regression model, the regularization strength can be tuned using the alpha parameter. Additionally, the test_size parameter (defaulting to 0.2 or 20% of the data) lets users control the proportion of data allocated for testing during data splitting. These customizable parameters offer flexibility, enabling users to tailor the model selection process to their specific requirements while ensuring proper cross-validation practices as shown in the image.
+
+
