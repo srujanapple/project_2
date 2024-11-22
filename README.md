@@ -44,3 +44,26 @@ Tends to penalize models with many predictors too much, especially in the presen
 Assumes the model is correctly specified. If the model assumptions (e.g., linear relationships) are incorrect, AIC may suggest a poor-fitting model.
 
 ### What could you implement given more time to mitigate these cases or help users of your methods?
+If given more time, there are various ways to enhance the robustness and adaptability of the methods for linear regression, ridge regression, and model evaluation. Below are some suggestions for improvements:
+
+**Enhancing Robustness for Linear and Ridge Regression Models:**
+
+- **Regularization Techniques:** To boost performance, particularly in the presence of multicollinearity or large feature sets, we could integrate adaptive regularization techniques such as Lasso or ElasticNet. This would create a more flexible model that adjusts to different types of data, improving generalization.
+  
+- **Handling Outliers:** Implementing outlier detection and handling strategies (e.g., robust regression methods or removing extreme values) would help prevent the model from overfitting to noisy or unusual data points.
+
+**Improving Data Cleaning and Preprocessing:**
+
+- **Missing Data Management:** Rather than removing rows with missing values, we could use imputation methods like filling missing values with the mean, median, or mode for numerical data, or the most frequent category for categorical data. This would preserve valuable information and prevent data loss due to missing values, a common issue in real-world datasets.
+
+- **Feature Scaling and Transformation:** For improved model accuracy and convergence, especially in Ridge Regression, applying feature scaling (e.g., standardization or normalization) would ensure that all features are on a comparable scale, preventing any one feature from dominating the learning process due to its larger values.
+
+**Customizable Parameters:**
+
+- **Generic Parameter Adjustment:** Making parameters such as the value of k in K-fold cross-validation and the number of iterations (n_iterations) in bootstrapping more flexible would allow users to pass them as arguments when calling the respective functions. This would make the methods more adaptable and user-friendly for different datasets and use cases.
+
+- **Dynamic Model Evaluation:** We could enhance the `evaluate_model` method to include additional performance metrics like R-squared and Adjusted R-squared. This would provide a more comprehensive assessment of the model's fit, beyond just MSE and AIC.
+
+**Handling Different Data Types:**
+
+- **Categorical Data Processing:** Currently, categorical variables are not being handled. Introducing preprocessing techniques such as one-hot encoding or label encoding would allow the model to process both numerical and categorical data. This is particularly useful for datasets that contain mixed data types.
