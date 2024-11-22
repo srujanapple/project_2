@@ -9,3 +9,5 @@
 
 # Model Implementation and Evaluation
 This project includes the implementation of both linear regression and ridge regression. The models are designed to run concurrently, allowing the selection of the one that performs best based on the given dataset. To ensure robust performance assessment, k-fold cross-validation and bootstrapping techniques were applied. Additionally, the Akaike Information Criterion (AIC) was used to evaluate the quality and effectiveness of each model.
+
+
