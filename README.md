@@ -98,4 +98,6 @@ def main():
 
 **Tips:**
 
-* Play around with the "K" value used for cross-validation and the number of iterations ("n_iterations") for bootstrapping. These can affect how well your model performs. The best settings will depend on the size of your data and your computer's processing power. 
+* Play around with the "K" value used for cross-validation and the number of iterations ("n_iterations") for bootstrapping. These can affect how well your model performs. The best settings will depend on the size of your data and your computer's processing power.
+  
+### Results
